@@ -17,8 +17,8 @@ const PerksModule = () => {
       <div className="perks__image--overlay"></div>
       <div className="container container__tight">
         <Perk
-          title="Built For Speed"
-          content="By using GatsbyJS, the Barcadia site is super-fast out of the box"
+          title="Novel Problem"
+          content="We look at the problem from a different angle, and we’re not just talking about the problem, we’re talking about the solution."
         >
           <StaticImage
             src="../../../static/logos/gatsby-logo.svg"
@@ -31,8 +31,8 @@ const PerksModule = () => {
           <Cross />
         </span>
         <Perk
-          title="Built For Content"
-          content="Contentful helps you edit your application with ease as your business expands"
+          title="Novel Solution"
+          content="We look for a better solution."
         >
           <StaticImage
             src="../../../static/logos/contentful-logo.svg"

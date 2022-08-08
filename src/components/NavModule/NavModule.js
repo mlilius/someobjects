@@ -4,7 +4,7 @@ import MenuContext from "../MenuContext"
 import { motion } from "framer-motion"
 import { menuItems } from "./NavConstants"
 import { UseSiteMetadata } from "../../hooks/useSiteMetadata"
-import useFeaturedProduct from "../../hooks/use-featured-product"
+import useFeaturedObject from "../../hooks/use-featured-object"
 import { FiChevronDown as Chevron } from "react-icons/fi"
 import {
   NavModuleStyles,
@@ -22,7 +22,7 @@ import {
 } from "./NavAnim"
 
 const NavModule = () => {
-  const featuredProduct = useFeaturedProduct()
+  const featuredProduct = useFeaturedObject()
 
   const [isOpen, setNav] = useContext(MenuContext)
   const [subNavIsOpen, setSubNav] = useState(false)
@@ -101,7 +101,7 @@ const NavModule = () => {
                 onClick={toggleSubNav}
                 onKeyDown={toggleSubNav}
               >
-                Products<span>.</span>
+                Objects<span>.</span>
                 <Chevron />
               </button>
 
@@ -114,9 +114,9 @@ const NavModule = () => {
                   <Link
                     onClick={toggleNav}
                     onKeyDown={toggleNav}
-                    to="/products"
+                    to="/objects"
                   >
-                    All Products<span>.</span>
+                    All Objects<span>.</span>
                   </Link>
                 </li>
                 <hr />

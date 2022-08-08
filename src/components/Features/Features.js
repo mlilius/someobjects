@@ -1,12 +1,12 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import { FeaturedProductsStyles } from "./FeaturesStyles"
-import FeaturedProduct from "./FeaturedProduct"
-import useFeaturedProduct from "../../hooks/use-featured-product"
+import FeaturedProduct from "./FeaturedObject"
+import useFeaturedObject from "../../hooks/use-featured-object"
 import Button from "../Button/Button"
 
 const Features = ({ title, introduction }) => {
-  const featuredProduct = useFeaturedProduct()
+  const featuredProduct = useFeaturedObject()
 
   return (
     <FeaturedProductsStyles className="section">
@@ -25,7 +25,7 @@ const Features = ({ title, introduction }) => {
         })}
       </div>
       <div className="container container__tight learn__more">
-        <Button as={Link} to="/products" text="All Products" />
+        <Button as={Link} to="/objects" text="All Objects" />
       </div>
     </FeaturedProductsStyles>
   )

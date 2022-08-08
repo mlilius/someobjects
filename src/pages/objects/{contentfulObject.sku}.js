@@ -1,23 +1,23 @@
 import React from "react"
 import { graphql } from "gatsby"
-import ProductTemplate from "../../templates/product-template"
+import ObjectTemplate from "../../templates/object-template"
 import Seo from "../../components/SEO"
 import Layout from "../../components/Layout"
 
-const Product = ({ data: { contentfulProduct } }) => {
+const Object = ({ data: { contentfulObject } }) => {
   return (
     <>
-      <Seo title={contentfulProduct.title} />
+      <Seo title={contentfulObject.title} />
       <Layout>
-        <ProductTemplate {...contentfulProduct} />
+        <ObjectTemplate {...contentfulObject} />
       </Layout>
     </>
   )
 }
 
 export const data = graphql`
-  query productQuery($id: String) {
-    contentfulProduct(id: { eq: $id }) {
+  query objectQuery($id: String) {
+    contentfulObject(id: { eq: $id }) {
       title
       introduction
       price
@@ -31,12 +31,12 @@ export const data = graphql`
       description {
         raw
       }
-      faqs {
-        question
-        answer {
-          raw
-        }
-      }
+      # faqs {
+      #   question
+      #   answer {
+      #     raw
+      #   }
+      # }
       gallery {
         gatsbyImageData(
           width: 1000
@@ -48,4 +48,4 @@ export const data = graphql`
   }
 `
 
-export default Product
+export default Object

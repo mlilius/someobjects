@@ -7,7 +7,7 @@ import Faq from "../components/Faq/Faq"
 import Features from "../components/Features/Features"
 import RichText from "../components/RichText"
 
-const ProductTemplateStyles = styled.div`
+const ObjectTemplateStyles = styled.div`
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -41,7 +41,7 @@ const ProductTemplateStyles = styled.div`
   }
 `
 
-const ProductGallery = styled.section`
+const ObjectGallery = styled.section`
   width: 100%;
 
   > .container {
@@ -67,7 +67,7 @@ const ProductGallery = styled.section`
   }
 `
 
-const Producttemplate = (contentfulProduct) => {
+const Objecttemplate = (contentfulObject) => {
   const {
     headerImage,
     title,
@@ -76,8 +76,8 @@ const Producttemplate = (contentfulProduct) => {
     description,
     faqs,
     gallery,
-  } = contentfulProduct
-  const productHeaderImage = getImage(headerImage)
+  } = contentfulObject
+  const objectHeaderImage = getImage(headerImage)
   return (
     <>
       <Seo title={title} />
@@ -89,11 +89,11 @@ const Producttemplate = (contentfulProduct) => {
       >
         <GatsbyImage
           className="banner__image"
-          image={productHeaderImage}
+          image={objectHeaderImage}
           alt={title}
         />
       </BannerModule>
-      <ProductTemplateStyles className="section">
+      <ObjectTemplateStyles className="section">
         <div className="container container__tight">
           {description && (
             <div className="column">
@@ -114,23 +114,23 @@ const Producttemplate = (contentfulProduct) => {
             </div>
           )}
         </div>
-      </ProductTemplateStyles>
+      </ObjectTemplateStyles>
       {gallery && (
-        <ProductGallery className="section">
+        <ObjectGallery className="section">
           <div className="container container__tight">
             {gallery.map((item, index) => {
               let galleyImage = getImage(item)
               return <GatsbyImage key={index} image={galleyImage} />
             })}
           </div>
-        </ProductGallery>
+        </ObjectGallery>
       )}
       <Features
-        title="Featured Products from Barcadia."
-        introduction="Vivamus quam mauris, pulvinar vel mauris id, interdum semper neque. Proin malesuada libero eget tellus scelerisque, id egestas tortor egestas."
+        title="Featured Objects by SOME Studio."
+        introduction=""
       />
     </>
   )
 }
 
-export default Producttemplate
+export default Objecttemplate

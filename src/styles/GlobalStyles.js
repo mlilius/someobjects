@@ -62,7 +62,7 @@ export const GlobalStyle = createGlobalStyle`
     --h4: 29px;
     --h5: 27px;
     --h6: 25px;
-    --sectionMargin: 180px;
+    --sectionMargin: 30px;
   }
 
   @media(min-width:1200px) {

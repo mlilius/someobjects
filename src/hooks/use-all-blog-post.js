@@ -9,7 +9,8 @@ const useAllBlogPost = () => {
         nodes {
           title
           gatsbyPath(filePath: "/news/{contentfulPost.url}")
-          createdAt(formatString: "DD MMMM, YYYY")
+          # createdAt(formatString: "DD MMMM, YYYY")
+          createdAt:publishedDate(formatString: "DD MMMM, YYYY")
           introduction
         }
       }
