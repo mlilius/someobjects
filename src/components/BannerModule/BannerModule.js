@@ -36,7 +36,7 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
             {subTitle && <h2>{subTitle}</h2>}
             {price && (
               <h2 className="price">
-                £{price}
+                ${price}
                 <span style={{ color: "var(--primary)" }}>.</span>
               </h2>
             )}
@@ -49,8 +49,19 @@ const BannerModule = ({ children, title, subTitle, price, enquire }) => {
                   to="/contact"
                 />
               )}
-              {/* <Button onClick={scrollToArea} text="Learn More" /> */}
+              <Button onClick={scrollToArea} text="Learn More" />
             </div>
+            {/* <div className="banner__btns">
+              {enquire && (
+                <Button
+                  className="btn"
+                  text="Enquire Now"
+                  as={Link}
+                  to="/contact"
+                />
+              )}
+              <Button onClick={scrollToArea} text="Learn More" />
+            </div> */}
           </div>
         </div>
         <div className="gradient"></div>

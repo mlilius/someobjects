@@ -9,8 +9,8 @@ const Index = () => {
       <Seo title="Home" />
       <Layout>
         <BannerModule
-          title="Thank you for signing up as a beta tester for this new object"
-          subTitle=""
+          title="Thank you for your interest"
+          subTitle="We will be in touch soon."
         />
       </Layout>
     </>

@@ -72,6 +72,7 @@ const Objecttemplate = (contentfulObject) => {
     headerImage,
     title,
     price,
+    etsyLink,
     introduction,
     description,
     faqs,
@@ -85,7 +86,7 @@ const Objecttemplate = (contentfulObject) => {
         title={title}
         price={price}
         subTitle={introduction}
-        enquire={true}
+        etsyLink={etsyLink}
       >
         <GatsbyImage
           className="banner__image"

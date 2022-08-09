@@ -24,6 +24,11 @@ const handler = async (req, res) => {
     await sheet.loadHeaderRow();
     const columns = sheet.headerValues;
 
+    // Generate the row data
+    const row = req.body;
+    // Add signup timestamp to the row
+    row.signupTimestamp = new Date();
+
     // Add any missing columns based on the incoming data
     const incomingDataColumns = Object.keys(req.body);
     const newColumns = incomingDataColumns.filter(
@@ -33,7 +38,6 @@ const handler = async (req, res) => {
       await sheet.setHeaderRow(columns.concat(newColumns));
     }
 
-    const row = req.body;
     return await sheet.addRow(row).then(
       (value) => {
         // Redirect to index page

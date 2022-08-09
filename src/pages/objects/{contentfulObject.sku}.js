@@ -21,6 +21,7 @@ export const data = graphql`
       title
       introduction
       price
+      etsyLink
       headerImage {
         gatsbyImageData(
           width: 2000

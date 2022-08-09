@@ -13,8 +13,8 @@ const contact = () => {
         <SimpleBanner title="Signup as a beta tester for this new object">
           <StaticImage
             className="banner__image"
-            src="../../static/macbook-dark.jpg"
-            alt="Apple Macbook Dark"
+            src="../../static/preview.png"
+            alt="Abstract wheel"
           />
         </SimpleBanner>
         <BetaSignup />

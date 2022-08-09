@@ -1,7 +1,7 @@
 import * as React from "react"
 import Layout from "../components/Layout"
 import { StaticImage } from "gatsby-plugin-image"
-import Contact from "../components/Contact/Contact"
+// import Contact from "../components/Contact/Contact"
 import Seo from "../components/SEO"
 import SimpleBanner from "../components/SimpleBanner/SimpleBanner"
 
@@ -13,11 +13,11 @@ const contact = () => {
         <SimpleBanner title="Get in touch">
           <StaticImage
             className="banner__image"
-            src="../../static/macbook-dark.jpg"
-            alt="Apple Macbook Dark"
+            src="../../static/preview.png"
+            alt="Abstract wheel"
           />
         </SimpleBanner>
-        <Contact />
+        {/* <Contact /> */}
       </Layout>
     </>
   )
